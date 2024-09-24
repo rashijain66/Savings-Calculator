@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GrowthSaver: Eco-Friendly Savings Calculator</title>
+    <!-- link the google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- link feathericon cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.2/feather.min.js" integrity="sha512-zMm7+ZQ8AZr1r3W8Z8lDATkH05QG5Gm2xc6MlsCdBz9l6oE8Y7IXByMgSm/rdRQrhuHt99HAYfMljBOEZ68q5A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+        <!-- left column -->
+      <div class="left-column">
+        <div class="eco-icon">🌱</div>
+        <h1>GrowthSaver</h1>
+        <p class="description">
+          Nurture your financial future with our eco-friendly savings
+          calculator. Watch your money grow like a thriving garden!
+        </p>
+        <svg
+          class="savings-tree"
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M50 10 L90 90 H10 Z" fill="#4CAF50" />
+          <circle cx="50" cy="50" r="10" fill="#81C784" />
+          <rect x="45" y="90" width="10" height="20" fill="#3E2723" />
+        </svg>
+      </div>
+
+      <div class="right-column">
+        <!-- first input group -->
+        <div class="input-group">
+          <label for="goal-amount">Savings Goal Amount ($)</label>
+          <input
+            type="number"
+            id="goal-amount"
+            placeholder="Enter your savings goal"
+            required
+          />
+        <img src="images/target.svg" class="input-icon">
+        </div>
+        <!-- second input group-->
+        <div class="input-group">
+          <label for="current-savings">Current Savings ($)</label>
+          <input
+            type="number"
+            id="current-savings"
+            placeholder="Enter your current savings"
+            required
+          />
+          <img src="images/dollar-sign.svg" class="input-icon">
+        </div>
+        <!-- third input group -->
+        <div class="input-group">
+          <label for="monthly-contribution">Monthly Contribution ($)</label>
+          <input
+            type="number"
+            id="monthly-contribution"
+            placeholder="Enter your monthly contribution"
+            required
+          />
+          <img src="images/trending-up.svg" class="input-icon">
+        </div>
+
+        <!-- button -->
+        <button id="calculate-btn">
+            <img src="images/refresh.svg">
+          Grow Your Savings
+        </button>
+
+        <!-- message/result -> progress container -->
+        <div class="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="result" id="result"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
